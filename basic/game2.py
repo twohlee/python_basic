@@ -69,14 +69,3 @@ print('-'*20)
 
 
 
-
-
-
-# 예외 처리 하는 법
-'''
-    while True:
-        try:
-    
-
-        except:
-'''
