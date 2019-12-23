@@ -43,7 +43,7 @@ def step1():
 
 def step2():
     while True:
-        tmp = input("게임 제목을 입력하시오, 단 {}자 \이내로 입력 가능합니다. => ".format(GAME_TITLE_LEN_MAX)).strip()       
+        tmp = input("게임 제목을 입력하시오, 단 {}자 이내로 입력 가능합니다. => ".format(GAME_TITLE_LEN_MAX)).strip()       
         if not tmp:
             print("정확하게 입력하세요!")
         elif len(tmp)>GAME_TITLE_LEN_MAX:
@@ -58,9 +58,10 @@ def step2():
     # 전역 변수로 빼야 한다
     return gameTitle
 
+
 def step3():
     while True:
-        tmp = input("플레이어의 닉네임을 입력하시오, 단 %s자로 제한한다\n=>" % PLAYER_NAME_LEN_MAX).strip()
+        tmp = input("플레이어의 닉네임을 입력하시오, 단 %s자로 제한한다=>" % PLAYER_NAME_LEN_MAX).strip()
         if not tmp:
             print("정확하게 입력하세요!")
         elif len(tmp)>PLAYER_NAME_LEN_MAX:
@@ -107,6 +108,7 @@ def step6(gameTitle):
     while True:input();break # 한줄에 여러문장을 기술할때는 구분자로 ; 사용
 
 def step7():
+    # isOneGaming, myTotalScroe가 전역 변수임을 알린다. => 이를 통해서 수정을 가능케 한다.
     global isOneGaming
     global myTotalScore 
 
@@ -200,4 +202,8 @@ def step7():
     # # 2) 누군가가 파일명.py를 가져와서 사용하면 => __name__ => '파일명'
     # print( '__name__ => ', __name__ )
     # if __name__ == '__main__':
-main()
+if __name__ == '__main__':
+    main()
+
+else:
+    print('누군가가 나를 모듈로 불러서 특정 기능을 쓰려고 한다.')
