@@ -70,8 +70,10 @@ nums  = list('A23456789')+['10']+list('JQK')
 cards = [ i+j for i in types for j in nums ]
 score_table = dict()
 for key in nums:score_table[ key ] = nums.index( key ) +1
+print(score_table)
 import random
 random.shuffle(cards)
+print(cards)
 my_cards  = cards[:8:2]
 my_first_cards = my_cards[:2]
 com_cards = cards[1:9:2]
