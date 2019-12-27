@@ -35,6 +35,14 @@ def calAge():
     return "Calculate Age"
 
 
+@app.route("/age2")
+def calAge2():
+    sql = "SELECT * FROM MEMBER"
+    cursor.execute(sql)
+    data = cursor.fetchall() 
+    return render_template('list.html', list=data)
+   
+
 
 
     
